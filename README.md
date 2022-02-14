@@ -12,7 +12,8 @@ Data is stored in Redis
 Please create a **multistage** Dockerfile to:
 - build go code in /api:
     - use image: `golang:alpine`
-    - commands `got get -d -v && go build -o api main.go`
+    - copy `main.go`, `go.mod` and `go.sum` into the image
+    - commands `go build -o api main.go`
 - package the resulting `api` binary in a vanilla `alpine` Docker image
 - run the container as user `appuser`
 - make the packaged binary the entrypoint of the container
