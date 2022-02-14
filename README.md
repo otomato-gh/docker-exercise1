@@ -14,7 +14,6 @@ Please create a **multistage** Dockerfile to:
 - package the resulting `api` binary in a vanilla `alpine` Docker image
 - run the container as user `appuser`
 - make the packaged binary the entrypoint of the container
-- define hel
 
 ## Frontend
 - Create a Dockerfile in `/front`
@@ -25,7 +24,7 @@ Please create a **multistage** Dockerfile to:
     - Define the command to run: `python3 front.py`
 
 ## Compose
-Write a docker-compose file that would containe 4 services:
+Write a docker-compose file that would contain 4 services:
 - front - serving the fronted app on port 80 of your host
     - Depends on `api`
     - Note - the frontend app needs the following env variables:
